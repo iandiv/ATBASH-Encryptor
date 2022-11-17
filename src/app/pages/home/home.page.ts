@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ export class HomePage implements OnInit {
   message:string;
   encrypted:string;
   enc:string="";
-  constructor() {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
    
@@ -64,5 +65,7 @@ clearPlain(){
 clearEnc(){
   this.encrypted = "";
   
+}
+copyEnc(){
 }
 }
